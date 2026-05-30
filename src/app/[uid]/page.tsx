@@ -6,6 +6,7 @@ import * as prismic from "@prismicio/client";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import { OG_IMAGE, SITE_DESCRIPTION } from "@/lib/siteMetadata";
 
 type Params = { uid: string };
 
@@ -28,16 +29,19 @@ export async function generateMetadata({
 
   return {
     title,
-    description: page.data.meta_description,
+    description: SITE_DESCRIPTION,
     openGraph: {
-      title: page.data.meta_title || title,
-      // Always use the local SoftDrinks artwork so social previews never fall
-      // back to the legacy Fizzi image still stored in the Prismic CMS.
-      images: [
-        {
-          url: "/cans-hero.png",
-        },
-      ],
+      title,
+      description: SITE_DESCRIPTION,
+      type: "website",
+      siteName: "SoftDrinks",
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: SITE_DESCRIPTION,
+      images: [OG_IMAGE.url],
     },
   };
 }

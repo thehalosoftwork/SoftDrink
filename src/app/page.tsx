@@ -4,6 +4,11 @@ import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import {
+  OG_IMAGE,
+  SITE_DESCRIPTION,
+  SITE_TITLE,
+} from "@/lib/siteMetadata";
 
 // This component renders your homepage.
 //
@@ -11,23 +16,25 @@ import { components } from "@/slices";
 //
 // Use the SliceZone to render the content of the page.
 
-const SITE_TITLE = "SoftDrinks – India's SoftDrink 3D Soda Site";
-const SITE_DESCRIPTION =
-  "SoftDrinks – India's SoftDrink 3D Soda Site by HaloSoft. Thums Up, Limca, Maaza, Campa Cola and Appy Fizz – five iconic Indian brands in one immersive 3D experience.";
-
 export async function generateMetadata(): Promise<Metadata> {
-  const client = createClient();
-  const home = await client.getByUID("page", "home");
-
+  // Metadata is hardcoded to the SoftDrinks brand. We intentionally do NOT read
+  // the Prismic meta fields here because that CMS document still holds the
+  // legacy "Fizzi" title/description/image, which would leak into link previews.
   return {
     title: SITE_TITLE,
-    description: home.data.meta_description ?? SITE_DESCRIPTION,
+    description: SITE_DESCRIPTION,
     openGraph: {
       title: SITE_TITLE,
-      description: home.data.meta_description ?? SITE_DESCRIPTION,
-      // Always use the local SoftDrinks artwork so social previews never fall
-      // back to the legacy Fizzi image still stored in the Prismic CMS.
-      images: [{ url: "/cans-hero.png" }],
+      description: SITE_DESCRIPTION,
+      type: "website",
+      siteName: "SoftDrinks",
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: SITE_TITLE,
+      description: SITE_DESCRIPTION,
+      images: [OG_IMAGE.url],
     },
   };
 }
