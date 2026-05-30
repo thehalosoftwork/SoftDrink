@@ -37,18 +37,18 @@ const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
           {slice.primary.text_group.map((item, index) => (
             <div
               key={asText(item.heading)}
-              className="alternating-section grid h-screen place-items-center gap-x-8 px-4 md:grid-cols-2 md:gap-x-12 lg:gap-x-24"
+              className="alternating-section grid h-screen place-items-center gap-x-8 px-3 xs:px-4 md:grid-cols-2 md:gap-x-12 lg:gap-x-24"
             >
               <div
                 className={clsx(
                   index % 2 === 0 ? "col-start-1" : "md:col-start-2",
-                  "max-w-md rounded-lg p-4 backdrop-blur-lg max-md:bg-white/40",
+                  "max-w-md rounded-lg p-3 backdrop-blur-lg max-md:bg-white/40 xs:p-4",
                 )}
               >
-                <h2 className="text-balance text-4xl font-bold sm:text-5xl lg:text-6xl">
+                <h2 className="text-balance text-3xl font-bold xs:text-4xl sm:text-5xl lg:text-6xl">
                   <PrismicText field={item.heading} />
                 </h2>
-                <div className="mt-4 text-base sm:text-lg md:text-xl">
+                <div className="mt-3 text-sm xs:mt-4 xs:text-base sm:text-lg md:text-xl">
                   <PrismicRichText field={item.body} />
                 </div>
               </div>

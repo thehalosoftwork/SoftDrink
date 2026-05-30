@@ -113,19 +113,19 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       </View>
 
       <div className="grid">
-        <div className="grid min-h-screen place-items-center py-12 md:h-screen md:py-0">
-          <div className="grid auto-rows-min place-items-center gap-y-6 text-center md:gap-y-0">
-            <h1 className="hero-header text-6xl font-black uppercase leading-[.8] text-orange-500 sm:text-7xl md:text-[9rem] lg:text-[13rem]">
+        <div className="grid min-h-screen place-items-center px-1 py-12 md:h-screen md:py-0">
+          <div className="grid auto-rows-min place-items-center gap-y-4 text-center xs:gap-y-6 md:gap-y-0">
+            <h1 className="hero-header text-5xl font-black uppercase leading-[.8] text-orange-500 xs:text-6xl sm:text-7xl md:text-[9rem] lg:text-[13rem]">
               <TextSplitter
                 text={asText(slice.primary.heading)}
                 wordDisplayStyle="block"
                 className="hero-header-word"
               />
             </h1>
-            <div className="hero-subheading text-balance text-3xl font-semibold text-sky-950 sm:text-4xl md:mt-12 md:text-5xl lg:text-6xl">
+            <div className="hero-subheading text-balance text-2xl font-semibold text-sky-950 xs:text-3xl sm:text-4xl md:mt-12 md:text-5xl lg:text-6xl">
               <PrismicRichText field={slice.primary.subheading} />
             </div>
-            <div className="hero-body text-balance text-lg font-normal text-sky-950 sm:text-xl md:text-2xl">
+            <div className="hero-body text-balance text-base font-normal text-sky-950 xs:text-lg sm:text-xl md:text-2xl">
               <PrismicRichText field={slice.primary.body} />
             </div>
             <Button
@@ -138,10 +138,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
         <div className="text-side relative z-[80] grid min-h-screen items-center gap-6 py-12 md:h-screen md:grid-cols-2 md:gap-4 md:py-0">
           <div>
-            <h2 className="text-side-heading text-balance text-5xl font-black uppercase text-sky-950 sm:text-6xl lg:text-8xl">
+            <h2 className="text-side-heading text-balance text-4xl font-black uppercase text-sky-950 xs:text-5xl sm:text-6xl lg:text-8xl">
               <TextSplitter text={asText(slice.primary.second_heading)} />
             </h2>
-            <div className="text-side-body mt-4 max-w-xl text-balance text-lg font-normal text-sky-950 sm:text-xl">
+            <div className="text-side-body mt-4 max-w-xl text-balance text-base font-normal text-sky-950 xs:text-lg sm:text-xl">
               <PrismicRichText field={slice.primary.second_body} />
             </div>
           </div>

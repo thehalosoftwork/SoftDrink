@@ -3,6 +3,12 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      screens: {
+        // Extra-small breakpoint so the tiniest phones (e.g. iPhone SE 1st gen
+        // at 320px) get their own tuned sizes instead of sharing the base
+        // styles with mid-size phones up to the default `sm` (640px).
+        xs: "375px",
+      },
       fontFamily: {
         sans: ["var(--font-alpino)", "sans-serif"],
       },

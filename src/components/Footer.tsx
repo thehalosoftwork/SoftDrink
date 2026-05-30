@@ -1,5 +1,5 @@
 import React from "react";
-import { FizziLogo } from "./FizziLogo";
+import { SoftDrinksLogo } from "./SoftDrinksLogo";
 import CircleText from "./CircleText";
 import Magnetic from "./Magnetic";
 
@@ -10,7 +10,7 @@ export default function Footer({}: Props) {
     <footer className="bg-[#FEE832] text-[#FE6334]">
       <div className="relative mx-auto flex w-full max-w-4xl justify-center px-4 py-10">
         <Magnetic strength={0.15}>
-          <FizziLogo className="h-16 md:h-20 cursor-pointer" />
+          <SoftDrinksLogo className="h-16 md:h-20 cursor-pointer" />
         </Magnetic>
         {/* CircleText badge — hidden on phones (it overlapped the logo on
             narrow screens), revealed from md upwards. */}

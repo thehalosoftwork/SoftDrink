@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 
+import { Metadata } from "next";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 
@@ -18,6 +19,18 @@ const alpino = localFont({
   weight: "100 900",
   variable: "--font-alpino",
 });
+
+// Resolve a base URL so relative Open Graph / social-preview image paths
+// (like /cans-hero.png) become absolute URLs when deployed on Vercel.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+};
 
 export default function RootLayout({
   children,

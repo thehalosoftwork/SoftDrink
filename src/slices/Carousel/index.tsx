@@ -78,17 +78,17 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
       id="flavors"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="carousel relative grid h-screen grid-rows-[auto,4fr,auto] justify-center overflow-hidden bg-white py-12 text-white"
+      className="carousel relative grid h-screen grid-rows-[auto,4fr,auto] justify-center overflow-hidden bg-white py-8 text-white sm:py-12"
     >
       <div className="background pointer-events-none absolute inset-0 bg-[#0F1B3C] opacity-50" />
 
       <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#0F1B3C]" />
 
-      <h2 className="relative px-4 text-center text-3xl font-bold sm:text-4xl md:text-5xl">
+      <h2 className="relative px-4 text-center text-2xl font-bold xs:text-3xl sm:text-4xl md:text-5xl">
         <PrismicText field={slice.primary.heading} />
       </h2>
 
-      <div className="grid grid-cols-[auto,1fr,auto] items-center gap-1 sm:gap-2">
+      <div className="grid grid-cols-[auto,1fr,auto] items-center gap-1 px-2 sm:gap-2 sm:px-0">
         {/* Left */}
         <ArrowButton
           onClick={() => changeFlavor(currentFlavorIndex + 1)}
@@ -96,7 +96,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
           label="Previous Flavor"
         />
         {/* Can */}
-        <View className="aspect-square h-[70vmin] min-h-40">
+        <View className="aspect-square h-[60vmin] min-h-40 xs:h-[70vmin]">
           <Center position={[0, 0, 1.5]}>
             <FloatingCan
               ref={sodaCanRef}
@@ -122,12 +122,12 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
       </div>
 
       <div className="text-area relative mx-auto px-4 text-center">
-        <div className="text-wrapper text-2xl font-medium sm:text-3xl md:text-4xl">
+        <div className="text-wrapper text-xl font-medium xs:text-2xl sm:text-3xl md:text-4xl">
           <p>{FLAVORS[currentFlavorIndex].name}</p>
         </div>
         {/* Pricing hardcoded for the SoftDrinks rebrand — the Prismic field
             still contains the legacy "12 cans - $35.99" copy. */}
-        <div className="mt-2 text-lg font-normal opacity-90 sm:text-xl md:text-2xl">
+        <div className="mt-2 text-base font-normal opacity-90 xs:text-lg sm:text-xl md:text-2xl">
           <p>13 cans – ₹500</p>
         </div>
       </div>
@@ -152,7 +152,7 @@ function ArrowButton({
     <Magnetic strength={0.35} range={80}>
       <button
         onClick={onClick}
-        className="size-10 shrink-0 rounded-full border-2 border-white bg-white/10 p-2 opacity-85 ring-white focus:outline-none focus-visible:opacity-100 focus-visible:ring-4 sm:size-12 sm:p-3 md:size-16 lg:size-20 block"
+        className="block size-9 shrink-0 rounded-full border-2 border-white bg-white/10 p-1.5 opacity-85 ring-white focus:outline-none focus-visible:opacity-100 focus-visible:ring-4 xs:size-10 xs:p-2 sm:size-12 sm:p-3 md:size-16 lg:size-20"
       >
         <ArrowIcon className={clsx(direction === "right" && "-scale-x-100")} />
         <span className="sr-only">{label}</span>

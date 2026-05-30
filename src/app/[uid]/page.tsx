@@ -31,9 +31,11 @@ export async function generateMetadata({
     description: page.data.meta_description,
     openGraph: {
       title: page.data.meta_title || title,
+      // Always use the local SoftDrinks artwork so social previews never fall
+      // back to the legacy Fizzi image still stored in the Prismic CMS.
       images: [
         {
-          url: page.data.meta_image?.url || "/cans-hero.png",
+          url: "/cans-hero.png",
         },
       ],
     },

@@ -175,17 +175,17 @@ export default function Preloader() {
         <div className="bubble-loader absolute bottom-[-8%] left-[85%] w-6 h-6 rounded-full bg-green-500 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
       </div>
 
-      <div className="preloader-content relative z-10 flex flex-col items-center max-w-lg px-8 text-center">
+      <div className="preloader-content relative z-10 flex flex-col items-center max-w-lg px-6 text-center xs:px-8">
         {/* Brand visual preview */}
-        <div className="mb-8 flex items-center justify-center space-x-2">
+        <div className="mb-6 flex items-center justify-center space-x-2 xs:mb-8">
           <div className="h-3 w-3 rounded-full bg-red-500 animate-ping" />
-          <span className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-400">
+          <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-400 xs:text-xs xs:tracking-[0.3em]">
             SoftDrinks Lab Presents
           </span>
         </div>
 
         {/* Large Typography Counter */}
-        <div className="relative font-black text-7xl sm:text-8xl md:text-9xl mb-4 overflow-hidden tracking-tighter">
+        <div className="relative font-black text-6xl xs:text-7xl sm:text-8xl md:text-9xl mb-4 overflow-hidden tracking-tighter">
           <div ref={countRef} className="tabular-nums flex items-baseline">
             <span className="bg-gradient-to-r from-orange-500 via-yellow-400 to-green-400 bg-clip-text text-transparent">
               {progress}

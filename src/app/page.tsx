@@ -25,9 +25,9 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: SITE_TITLE,
       description: home.data.meta_description ?? SITE_DESCRIPTION,
-      images: home.data.meta_image?.url
-        ? [{ url: home.data.meta_image.url }]
-        : [{ url: "/cans-hero.png" }],
+      // Always use the local SoftDrinks artwork so social previews never fall
+      // back to the legacy Fizzi image still stored in the Prismic CMS.
+      images: [{ url: "/cans-hero.png" }],
     },
   };
 }

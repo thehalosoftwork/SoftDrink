@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FizziLogo } from "@/components/FizziLogo";
+import { SoftDrinksLogo } from "@/components/SoftDrinksLogo";
 import Magnetic from "@/components/Magnetic";
 
 type Props = {};
@@ -12,7 +12,7 @@ export default function Header({}: Props) {
       <div className="pointer-events-auto">
         <Magnetic strength={0.15}>
           <a href="#hero" className="group outline-none block">
-            <FizziLogo className="h-14 cursor-pointer text-[#0F1B3C] sm:h-16 md:h-20 transition-all duration-300 ease-in-out hover:scale-105" />
+            <SoftDrinksLogo className="h-11 cursor-pointer text-[#0F1B3C] transition-all duration-300 ease-in-out hover:scale-105 xs:h-14 sm:h-16 md:h-20" />
           </a>
         </Magnetic>
       </div>
