@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"sentence": {
+				"__TYPE__": "FieldContent",
+				"value": "Bharat ka swaad, sky se zameen tak",
+				"type": "Text"
+			},
+			"flavor": {
+				"__TYPE__": "FieldContent",
+				"value": "maaza",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

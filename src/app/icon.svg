@@ -1,0 +1,27 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>SoftDrinks</title>
+  <rect width="100" height="100" rx="22" fill="#0F1B3C"/>
+  <rect x="30" y="22" width="40" height="60" rx="4" fill="#FFC107"/>
+  <rect x="30" y="22" width="40" height="60" rx="4" fill="url(#shine)" opacity="0.35"/>
+  <rect x="34" y="18" width="32" height="6" rx="2" fill="#9E9E9E"/>
+  <rect x="46" y="14" width="8" height="6" rx="1.5" fill="#9E9E9E"/>
+  <rect x="30" y="36" width="40" height="20" fill="#C8102E"/>
+  <text x="50" y="51"
+        fill="#FFFFFF"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="900"
+        font-size="13"
+        text-anchor="middle"
+        letter-spacing="-0.5">SD</text>
+  <circle cx="38" cy="66" r="1.6" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="44" cy="72" r="1.2" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="56" cy="68" r="1.4" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="62" cy="74" r="1.0" fill="#FFFFFF" opacity="0.5"/>
+  <defs>
+    <linearGradient id="shine" x1="30" y1="22" x2="70" y2="82" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+</svg>

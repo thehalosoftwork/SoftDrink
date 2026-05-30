@@ -1,0 +1,31 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Apna Pick Karo"
+						}
+					}
+				]
+			},
+			"price_copy": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sirf ₹40 mein. Pure SoftDrinks swaad, modern fizz. Paanch can ka pack ₹180 mein — free home delivery across Bharat."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
